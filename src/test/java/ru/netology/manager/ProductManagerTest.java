@@ -40,12 +40,41 @@ class ProductManagerTest {
     }
 
     @Test
-    void searchByMaker() {
+    void searchByMakerBook() {
         Product[] actual = manager.searchBy("AOne");
         Product[] expected = {new Book(1, "One", 100, "AOne")};
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    void searchByMakerSmartphone() {
+        Product[] actual = manager.searchBy("MSixth");
+        Product[] expected = {new Smartphone(6, "Sixth", 600, "MSixth")};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchBySmartphoneName() {
+        Product[] actual = manager.searchBy("Sixth");
+        Product[] expected = {new Smartphone(6, "Sixth", 600, "MSixth")};
+        assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    void searchByBookName() {
+        Product[] actual = manager.searchBy("Second");
+        Product[] expected = {new Book(2, "Second", 200, "ASecond")};
+        assertArrayEquals(expected, actual);
+
+    }
+    @Test
+    void shouldRemoveById(){
+        repository.removeById(7);
+        Product [] actual =repository.findAll() ;
+        Product[] expected =new Product[] {product1 ,product2 ,product3 ,product4 ,product5 ,product6 ,product8,product9 ,product10};
+        assertArrayEquals(expected, actual);
+    }
 
 
 }
