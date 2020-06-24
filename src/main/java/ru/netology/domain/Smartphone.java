@@ -29,6 +29,11 @@ public class Smartphone extends Product {
         this.maker = maker;
     }
 
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || maker.equalsIgnoreCase(search);
+    }
+
 
 }
 
