@@ -21,14 +21,6 @@ public class Smartphone extends Product {
         this.maker = maker;
     }
 
-    public String getMaker() {
-        return maker;
-    }
-
-    public void setMaker(String maker) {
-        this.maker = maker;
-    }
-
     @Override
     public boolean matches(String search) {
         return super.matches(search) || maker.equals(search);
