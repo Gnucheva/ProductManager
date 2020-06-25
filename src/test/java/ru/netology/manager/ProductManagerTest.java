@@ -19,7 +19,7 @@ class ProductManagerTest {
     Product product4 = new Book(4, "Fourth", 400, "AFourth");
     Product product5 = new Book(5, "Fifth", 500, "AFifth");
     Product product6 = new Smartphone(6, "Sixth", 600, "MSixth");
-    Product product7 = new Smartphone(7, "Seventh", 700, "MSeventh");
+    Product product7 = new Smartphone(7, "Seventh", 700, "g");
     Product product8 = new Smartphone(8, "Eighth", 800, "MEighth");
     Product product9 = new Smartphone(9, "Ninth", 900, "MNinth");
     Product product10 = new Smartphone(10, "Tenth", 1000, "MTenth");
