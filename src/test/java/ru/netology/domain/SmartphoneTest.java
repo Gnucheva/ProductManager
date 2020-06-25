@@ -22,4 +22,18 @@ class SmartphoneTest {
         assertTrue(smartphone.matches(text));
     }
 
+    @Test
+    void shouldMatchesByNameInvalid() {
+        String text = "Seventh";
+        smartphone.matches(text);
+        assertFalse(smartphone.matches(text));
+    }
+
+    @Test
+    void shouldMatchByMakerInvalid() {
+        String text = "MSeventh";
+        smartphone.matches(text);
+        assertFalse(smartphone.matches(text));
+    }
+
 }
