@@ -68,12 +68,28 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
 
     }
+
     @Test
-    void shouldRemoveById(){
+    void shouldRemoveById() {
         repository.removeById(7);
-        Product [] actual =repository.findAll() ;
-        Product[] expected =new Product[] {product1 ,product2 ,product3 ,product4 ,product5 ,product6 ,product8,product9 ,product10};
+        Product[] actual = repository.findAll();
+        Product[] expected = new Product[]{product1, product2, product3, product4, product5, product6, product8, product9, product10};
         assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchByInvalidMaker() {
+        Product[] actual = manager.searchBy("MEleventh");
+        Product[] expected = {};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void searchByInvalidAuthor() {
+        Product[] actual = manager.searchBy("ASixth");
+        Product[] expected = {};
+        assertArrayEquals(expected, actual);
+
     }
 
 
