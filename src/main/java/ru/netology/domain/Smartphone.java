@@ -11,6 +11,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Data
 @EqualsAndHashCode(callSuper = true)
+
 public class Smartphone extends Product {
     private String maker;
 
