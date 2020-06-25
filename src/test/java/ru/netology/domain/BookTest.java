@@ -27,7 +27,7 @@ class BookTest {
     void shouldMatchesByNameInvalid() {
         String text = "Second";
         book.matches(text);
-        assertFalse(book.matches(text)) ;
+        assertFalse(book.matches(text));
 
     }
 
@@ -35,7 +35,7 @@ class BookTest {
     void shouldMatchByAuthorInvalid() {
         String text = "ASecond";
         book.matches(text);
-        assertFalse(book.matches(text)) ;
+        assertFalse(book.matches(text));
 
 
     }
