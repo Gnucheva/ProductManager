@@ -31,7 +31,7 @@ public class Smartphone extends Product {
 
     @Override
     public boolean matches(String search) {
-        return super.matches(search) || maker.equalsIgnoreCase(search);
+        return super.matches(search) || maker.equals(search);
     }
 
 
