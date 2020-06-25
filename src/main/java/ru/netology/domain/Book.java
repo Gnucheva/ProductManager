@@ -11,7 +11,6 @@ import java.util.Objects;
 @AllArgsConstructor
 @Data
 @EqualsAndHashCode(callSuper = true)
-
 public class Book extends Product {
     private String author;
 

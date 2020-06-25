@@ -9,8 +9,6 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-
 public class Product {
     private int id;
     private String name;
